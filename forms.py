@@ -1,4 +1,4 @@
-from flaskwtf import FlaskForm
+from flask_wtf import FlaskForm
 from wtforms import StringField,BooleanField,RadioField,TextAreaField
 
 """Forms for adopt app."""
@@ -8,7 +8,7 @@ class AddPetForm(FlaskForm):
     species = StringField('species')
     photo_url = StringField('photo_url')
     age = RadioField(
-        choices[
+        choices = [
             ('baby','Baby'),
                 ('young','Young'),
                 ('adult','Adult'),
