@@ -1,0 +1,30 @@
+.Pet, form {
+    border: 1px black solid;
+    padding: 20px;
+    margin: 5px;
+}
+
+.fake-button {
+    border-radius: 5px;
+    padding: 20px;
+    margin: 5px;
+    display:inline-block;
+    background-color: rgb(114, 84, 185);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: rgb(114, 84, 185);
+}
+
+.Pet-name {
+    font-size: 1.5em;
+}
+
+.Pet-available {
+    color:green;
+}

@@ -1,15 +1,15 @@
 from models import db, Pet
-from app import app
+from app import app #useful in ipython
 
 db.drop_all()
 db.create_all()
 
-pet1 = Pet(
+lucky = Pet(
     name="Lucky",
-    species="Cat",
+    species="cat",
     photo_url='https://placekitten.com/200/200',
-    age="Baby",
+    age="baby",
     )
 
-db.session.add(pet1)
+db.session.add(lucky)
 db.session.commit()

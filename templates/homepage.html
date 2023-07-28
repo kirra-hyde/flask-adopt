@@ -5,23 +5,27 @@
 {% endblock %}
 
 {% block content %}
+  <a href="/add" class="fake-button">Add Pet</a>
 
   {% for pet in pets %}
-  <div>
-    {{pet.name}}
-  </div>
+    <div class="Pet">
+      <div class="Pet-name">
+        <a href="/{{pet.id}}">{{pet.name}}</a>
+      </div>
 
-  <div>
-    <img src="{{pet.photo_url}}" alt="{{pet.name}}">
-  </div>
+      <div class="Pet-photo">
+        <img src="{{pet.photo_url}}" alt="{{pet.name}}">
+      </div>
 
-    {% if pet.available %}
-    <div>
-      <b>Available</b>
+      {% if pet.available %}
+        <div class="Pet-available">
+          <b>Available</b>
+        </div>
+      {% endif %}
+
     </div>
-    {% endif %}
   {% endfor %}
 
-  <a href = "/add">Add Pet</a>
+
 
 {% endblock %}

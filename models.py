@@ -15,39 +15,41 @@ def connect_db(app):
     db.app = app
     db.init_app(app)
 
+
 class Pet(db.Model):
+    """Data for a pet."""
 
     __tablename__ = "pets"
 
-    id = db.Column (
+    id = db.Column(
         db.Integer,
-        primary_key = True,
-        autoincrement = True
+        primary_key=True,
+        autoincrement=True
     )
-    name = db.Column (
+    name = db.Column(
         db.String(25),
-        nullable = False
+        nullable=False
     )
-    species = db.Column (
+    species = db.Column(
         db.String(25),
-        nullable = False
+        nullable=False
     )
-    photo_url = db.Column (
+    photo_url = db.Column(
         db.Text,
-        nullable = False,
-        default = ""
+        nullable=False,
+        default=""
     )
-    age = db.Column (
-        db.String(25),  #TODO: How to add options: baby, young, adult, senior
-        nullable = False,
+    age = db.Column(
+        db.String(25),
+        nullable=False,
     )
-    notes = db.Column (
+    notes = db.Column(
         db.String(200),
-        nullable = False,
-        default = ""
+        nullable=False,
+        default=""
     )
-    available = db.Column (
+    available = db.Column(
         db.Boolean,
-        nullable = False,
-        default = True
+        nullable=False,
+        default=True
     )
