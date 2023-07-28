@@ -38,11 +38,13 @@ class Pet(db.Model):
         default = ""
     )
     age = db.Column (
-        db.String(25),  #TODO: How to add options
+        db.String(25),  #TODO: How to add options: baby, young, adult, senior
         nullable = False,
     )
     notes = db.Column (
-        db.String(200)
+        db.String(200),
+        nullable = False,
+        default = ""
     )
     available = db.Column (
         db.Boolean,

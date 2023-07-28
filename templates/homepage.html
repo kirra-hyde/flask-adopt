@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block title %}
+  Adoption Agency
+{% endblock %}
+
+{% block content %}
+
+  {% for pet in pets %}
+  <div>
+    {{pet.name}}
+  </div>
+
+  <div>
+    <img src="{{pet.photo_url}}" alt="{{pet.name}}">
+  </div>
+
+    {% if pet.available %}
+    <div>
+      <b>Available</b>
+    </div>
+    {% endif %}
+  {% endfor %}
+
+{% endblock %}
