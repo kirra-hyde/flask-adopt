@@ -47,12 +47,16 @@ def handle_add_pet_form():
 
     if form.validate_on_submit():
 
+        for field in form:
+            print("The field label:", field.label, "The field data:", field.data)
+
         # grab form data
         name = form.name.data
         species = form.species.data
         photo_url = form.photo_url.data
         age = form.age.data
         notes = form.notes.data
+
 
         # create pet instance
         pet = Pet(name=name,
